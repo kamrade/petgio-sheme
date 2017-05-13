@@ -1,0 +1,9 @@
+.radar {
+  height: 100vh;
+  background-color: #f0fafe;
+}
+
+.radar-container {
+  margin: 1rem auto;
+  max-width: 768px;
+}

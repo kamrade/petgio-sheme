@@ -1,23 +1,2 @@
-<div
-  class="simple"
-  (mouseup)="onClickSimple()"
-  (mousedown)="onMousedownSimple()"
-  [@clickedState]="clickInfo"></div>
-
-<p
-  (click)="onClickParagraph()"
-  [@clickedState]="paragraphInfo">Some text</p>
-
-<hr>
-<input type="number" (input)="numberEntered = $event.target.value">
-<br><br>
-<span class="nums" [@numberEnteredState]="numberEntered == 1 ? 'selected' : 'unselected'">1</span>
-<span class="nums" [@numberEnteredState]="numberEntered == 2 ? 'selected' : 'unselected'">2</span>
-<span class="nums" [@numberEnteredState]="numberEntered == 3 ? 'selected' : 'unselected'">3</span>
-<span class="nums" [@numberEnteredState]="numberEntered == 4 ? 'selected' : 'unselected'">4</span>
-<span class="nums" [@numberEnteredState]="numberEntered == 5 ? 'selected' : 'unselected'">5</span>
-<span class="nums" [@numberEnteredState]="numberEntered == 6 ? 'selected' : 'unselected'">6</span>
-<span class="nums" [@numberEnteredState]="numberEntered == 7 ? 'selected' : 'unselected'">7</span>
-<span class="nums" [@numberEnteredState]="numberEntered == 8 ? 'selected' : 'unselected'">8</span>
-<span class="nums" [@numberEnteredState]="numberEntered == 9 ? 'selected' : 'unselected'">9</span>
-<span class="nums" [@numberEnteredState]="numberEntered == 0 ? 'selected' : 'unselected'">0</span>
+<router-outlet name='auth'></router-outlet>
+<router-outlet></router-outlet>
