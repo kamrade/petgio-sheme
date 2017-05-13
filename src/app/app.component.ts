@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { trigger, state, style } from '@angular/animations';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-root',
@@ -14,9 +14,11 @@ import { trigger, state, style } from '@angular/animations';
       })),
       state('clicked', style({
         backgroundColor: 'lightblue',
-        width: '300px',
-        height: '50px'
+        width: '100%',
+        height: '100px'
       })),
+      transition('default => clicked', animate('200ms 100ms ease-in')),
+      transition('clicked => default', animate('400ms 100ms ease-out'))
     ])
   ]
 })
