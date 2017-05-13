@@ -2,4 +2,9 @@
   width: 100px;
   height: 100px;
   background: orange;
+  cursor: pointer;
+}
+
+.nums {
+  cursor: pointer;
 }
