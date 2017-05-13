@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { trigger, state, style, transition, animate } from '@angular/animations';
+import { clickedStateTrigger, numberEnteredStateTrigger } from './animations';
 
 @Component({
   selector: 'app-root',
@@ -7,51 +7,9 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   styleUrls: ['./app.component.css'],
 
   animations: [
-    trigger('clickedState', [
-      state('default', style({
-        backgroundColor: 'orange',
-        width: '100px',
-        height: '100px'
-      })),
-      state('clicked', style({
-        backgroundColor: 'orange',
-        width: '100%',
-        height: '100px'
-      })),
-      state('mousedown', style({
-        backgroundColor: 'red'
-      })),
-      transition('default => clicked', animate('200ms 100ms ease-in')),
-      transition('clicked => default', animate('400ms 100ms ease-out')),
-      transition('mousedown <=> default', animate('400ms 100ms ease-out')),
-      transition('mousedown <=> clicked', animate('400ms 100ms ease-out'))
-    ]),
-    trigger('numberEnteredState', [
-      state('unselected', style({
-        border: '1px solid #333',
-        padding: '5px',
-        backgroundColor: 'white',
-        color: '#333'
-      })),
-      state('selected', style({
-        border: '2px solid red',
-        padding: '4px',
-        backgroundColor: '#333',
-        color: 'white'
-      })),
-      transition('unselected => selected', [
-        style({
-          border: '2px solid #333',
-          padding: '4px'
-        }),
-        animate(2000, style({
-          backgroundColor: 'red'
-        })),
-        animate(2000)
-      ])
-    ])
+    clickedStateTrigger,
+    numberEnteredStateTrigger
   ]
-
 })
 export class AppComponent {
   clickInfo = 'default';
