@@ -1,0 +1,28 @@
+.add-pet {
+  position: absolute;
+  z-index: 1;
+  top: 40px;
+  bottom: 40px;
+  right: 40px;
+  left: 40px;
+  background-color: orange;
+}
+
+.add-pet .add-pet__title {
+  display: block;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.overlay {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 1;
+  background-color: #fff;
+  opacity: .1;
+}

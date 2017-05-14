@@ -11,6 +11,7 @@ import { RadarComponent } from './radar/radar.component';
 import { TestComponent } from './test/test.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { AuthComponent } from './auth/auth.component';
+import { AddPetComponent } from './add-pet/add-pet.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AuthComponent } from './auth/auth.component';
     RadarComponent,
     TestComponent,
     SidebarComponent,
-    AuthComponent
+    AuthComponent,
+    AddPetComponent
   ],
   imports: [
     BrowserModule,

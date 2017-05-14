@@ -6,26 +6,29 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
   templateUrl: './auth.component.html',
   styleUrls: ['./auth.component.css'],
   animations: [
-    trigger('flyInOut', [
-      state('in', style({
-        transform: 'translateY(0)'
-      })),
+    trigger('authState', [
       transition('void => *', [
-        animate(300, keyframes([
-          style({ opacity: 0, transform: 'translateY(-100%)', offset: 0 }),
-          style({ opacity: 1, transform: 'translateY(15px)', offset: 0.3 }),
-          style({ opacity: 1, transform: 'translateY(0)', offset: 1.0 })
-        ]))
-      ])
+        style({ transform: 'translateY(-100%)'}),
+        animate('200ms 0ms ease-in'),
+        style({ transform: 'translateY(0)'})
+      ]),
+      transition('* => void', [
+        style({ transform: 'translateY(0)', opacity: 1}),
+        animate('200ms 0ms ease-out'),
+        style({ transform: 'translateY(-100%)', opacity: 0})
+      ]),
 
     ])
   ]
 })
 export class AuthComponent implements OnInit {
 
+  authCurrentState = 'default';
+
   constructor() { }
 
   ngOnInit() {
   }
+
 
 }

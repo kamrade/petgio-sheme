@@ -30,3 +30,7 @@
   font-size: 4.5rem;
   user-select: none;
 }
+
+.radar-navigation__list {
+  list-style: none;
+}

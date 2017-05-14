@@ -1,9 +1,27 @@
 <div class="radar">
 
   <div class="radar-welcome">
-    <h1 class="radar-title">Radar</h1>
+
+    <a routerLink="/">
+      <h1 class="radar-title">Radar</h1>
+    </a>
     <nav class="radar-navigation">
-      <a [routerLink]="['', { outlets: { 'auth':['login'] }}]">Log In</a>
+      <ul class="radar-navigation__list">
+        <li class="radar-navigation__list-item">
+          <a [routerLink]="['', { outlets: { 'auth':['login'] }}]">Log In</a>
+        </li>
+        <li class="radar-navigation__list-item">
+          <a [routerLink]="['', { outlets: { 'addPet':['addpet'] }}]">I've lost</a>
+        </li >
+        <li class="radar-navigation__list-item">
+          <a [routerLink]="['', { outlets: { 'addPet':['addpet'] }}]">I've found</a>
+        </li>
+        <li class="radar-navigation__list-item">
+          <a href="#">Just show me the map</a>
+        </li>
+      </ul>
+
     </nav>
+
   </div>
 </div>
