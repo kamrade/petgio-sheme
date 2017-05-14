@@ -1,5 +1,13 @@
-<div class="sidebar-wrapper">
-  <div class="sidebar">
-    <span>This is the sidebar</span>
-  </div>
+<div
+  [@viewState]="viewStateValue"
+  class="sidebar">
+
+  <span class="sidebar-logo"
+    (click)="sidebarControl()"
+    >Peggio(logo)</span>
+
+  <button
+    (click)="sidebarWide()"
+    [@expandButton]="expandButtonState"
+    class="sidebar-open">Open</button>
 </div>

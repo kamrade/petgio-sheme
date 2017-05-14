@@ -3,7 +3,8 @@ import { RadarComponent } from './radar/radar.component';
 import { AuthComponent } from './auth/auth.component'
 
 const routes: Routes = [
-  { path: '', component: RadarComponent },
+  { path: '', redirectTo: 'radar', pathMatch: 'full' },
+  { path: 'radar', component: RadarComponent },
   { path: 'login', outlet: 'auth', component: AuthComponent },
 ]
 

@@ -1,9 +1,32 @@
 .radar {
   height: 100vh;
-  background-color: #f0fafe;
+  background-color: rgba(200,60,0,0.7);
+  position: relative;
 }
 
-.radar-container {
-  margin: 1rem auto;
-  max-width: 768px;
+.radar::after {
+  content: '';
+  background-image: url('img/map.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+  opacity: .5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.radar-welcome {
+  position: absolute;
+  top: 200px;
+  left: 220px;
+  color: white;
+}
+
+.radar-title {
+  font-weight: 200;
+  font-size: 4.5rem;
+  user-select: none;
 }

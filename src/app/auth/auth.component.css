@@ -1,12 +1,9 @@
-.auth-wrapper {
-  position: relative;
-}
-
 .auth {
   height: 3rem;
   padding: 1rem;
   background-color: #4a4a4a;
   color: #fff;
   position: absolute;
+  z-index: 1;
   right: 100px;
 }

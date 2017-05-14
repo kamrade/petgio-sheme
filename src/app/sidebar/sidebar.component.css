@@ -1,12 +1,24 @@
-.sidebar-wrapper {
-  position: relative;
-}
-
 .sidebar {
   height: 3rem;
+  width: 6rem;
   padding: 1rem;
   background-color: #4a4a4a;
   color: #fff;
   position: absolute;
-  top: 100px;
+  z-index: 1;
+  top: 0px;
+}
+
+.sidebar-logo {
+  opacity: .5;
+  transition: opacity 200ms 0ms ease;
+  cursor: pointer;
+}
+
+.sidebar-logo:hover {
+  opacity: 1;
+}
+
+.sidebar-open {
+  margin-top: 3rem;
 }
